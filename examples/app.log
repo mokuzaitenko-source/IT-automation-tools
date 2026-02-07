@@ -1,0 +1,5 @@
+2026-02-07 08:00:01 INFO app startup complete
+2026-02-07 08:01:10 WARN retrying db connection
+2026-02-07 08:01:30 ERROR timeout while contacting service A
+2026-02-07 08:02:11 INFO user login success
+2026-02-07 08:03:15 ERROR timeout while contacting service B
