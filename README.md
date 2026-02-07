@@ -1,6 +1,6 @@
 # IT Automation Tools
 
-Practical Python utilities for IT support workflows.
+I built these practical Python utilities for IT support workflows.
 
 ## Tools Included
 
