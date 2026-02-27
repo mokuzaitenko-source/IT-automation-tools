@@ -1,4 +1,7 @@
-# IT Automation Tools
+﻿# IT Automation Tools
+
+![Status](https://img.shields.io/badge/status-stable-2ea44f)
+**Repo Type:** tool
 
 I built these practical Python utilities for IT support workflows.
 
@@ -35,3 +38,4 @@ These scripts reduce repetitive manual work and improve support response speed d
 ## Ownership
 
 Original work by Alvin Tolbert.
+

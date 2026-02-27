@@ -1,0 +1,33 @@
+﻿name: Script CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ticket summary smoke test
+        run: |
+          python scripts/ticket_summary.py --input examples/tickets.csv > ticket_summary.out
+          test -s ticket_summary.out
+
+      - name: Log filter smoke test
+        run: |
+          python scripts/log_filter.py --input examples/app.log --level ERROR --keyword timeout > log_filter.out
+          test -s log_filter.out
+
+      - name: Bulk rename dry-run smoke test
+        run: |
+          python scripts/bulk_rename.py --path examples/files --find old --replace new --dry-run > rename.out
+          test -s rename.out
